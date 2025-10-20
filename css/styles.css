@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.circles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.circle-container {
+    text-align: center;
+}
+
+.circle-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dial {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+svg {
+    transform: rotate(-90deg);
+}
+
+.segment {
+    transition: all 0.3s ease;
+}
+
+.segment.selectable {
+    cursor: pointer;
+}
+
+.segment.selectable:hover {
+    opacity: 0.8;
+}
+
+.segment-text {
+    transition: all 0.3s ease;
+}
+
+.segment-text.selected {
+    fill: #c878ff !important;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.segment-text.highlighted-yellow {
+    fill: #FFD700 !important;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.segment-text.highlighted-red {
+    fill: #FF4444 !important;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 300;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    user-select: none;
+}
+
+.fn-circle { 
+    background: #1a1a1a; 
+    font-size: 72px; 
+}
+
+.tn-circle { 
+    background: #2c5f7a; 
+    font-size: 72px; 
+}
+
+.tni-circle { 
+    background: #3a6b7a; 
+    font-size: 60px; 
+}
+
+.info {
+    margin-top: 30px;
+    color: white;
+    font-size: 18px;
+}
+
+.info-label {
+    display: inline;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.info-values {
+    display: inline;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.bang-button {
+    background: #4a90e2;
+    border: 2px solid #6ab0f5;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 40px;
+}
+
+.bang-button:hover {
+    background: #5fa3e8;
+    transform: translateY(-2px) scale(1.05);
+}
+
+.instruction {
+    color: white;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+.settings {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.settings-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.settings-row label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.settings-row input {
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    width: 100px;
+}
