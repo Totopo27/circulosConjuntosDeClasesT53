@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Círculos - Temperamento 53</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <div class="main-container">
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="theme-toggle" aria-label="Cambiar a modo claro">
+            Modo: Oscuro
+        </button>
+
+        <!-- Header -->
+        <header class="app-header">
+            <h1>Sistema de Círculos</h1>
+            <p class="subtitle">Temperamento 53</p>
+        </header>
+
         <!-- Settings Panel -->
         <div class="settings">
             <div class="settings-row">
@@ -80,6 +93,8 @@
     <!-- Scripts -->
     <script src="js/temperament-operations.js" defer></script>
     <script src="js/circle_renderer.js" defer></script>
+    <script src="js/theme-toggle.js" defer></script>
 
 </body>
+
 </html>
